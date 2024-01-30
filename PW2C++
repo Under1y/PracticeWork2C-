@@ -1,0 +1,60 @@
+#include<iostream>
+#include <cmath> 
+
+using namespace std;
+
+int main()
+{
+    double x, y, a, f;
+    string o;
+    
+    while(o != "C"){
+        cout << "Введите первое число: ";
+        cin >> x;
+        cout << "Введите второе число: ";
+        cin >> y;
+        cout << "Введите операцию: ";
+        cin >> o;
+        /*
+        switch (o){
+            case '+':
+                x += y;
+            case "-":
+                x -= y;
+            case "*":
+                x *= y;
+            case "/":
+                x /= y;
+        }
+        */
+        if (o == "+"){
+            x += y;
+        }
+        else if (o == "-"){
+            x -= y;
+        }
+        else if (o == "*"){
+            x *= y;
+        }
+        else if (o == "/"){
+            x /= y;
+        }
+        else if (o == "**"){
+            x = pow(x, y);
+        }
+        else if (o == "//"){
+            x = sqrtf(x);
+        }
+        else if (o == "1%"){
+            x /= 100;
+        }
+        else if (o == "!"){
+            for (int i = 1; i <= x; i++) {
+	            f *= i;
+            }
+            x = f;
+        }
+        cout << "Ответ: " << x << endl;
+    }
+    return 0;
+}
